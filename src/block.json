@@ -1,0 +1,39 @@
+{
+  "apiVersion": 3,
+  "name": "pricing-table-block/main",
+  "title": "Pricing Table",
+  "category": "widgets",
+  "icon": "table-col-after",
+  "description": "A custom pricing table block with tiers.",
+  "supports": { "html": false },
+  "attributes": {
+    "tiers": {
+      "type": "array",
+      "default": [
+        {
+          "name": "Basic",
+          "price": "£0/month",
+          "description": "<p>Great for getting started!</p>",
+          "features": [ "Feature 1", "Feature 2" ],
+          "ctaText": "Choose Basic",
+          "ctaUrl": ""
+        },
+        {
+          "name": "Premium",
+          "price": "£9/month",
+          "description": "<p>For growing businesses.</p>",
+          "features": [ "All Basic features", "Premium support" ],
+          "ctaText": "Choose Premium",
+          "ctaUrl": ""
+        }
+      ]
+    }
+  },
+  "featuredTier": {
+    "type": "number",
+    "default": 0
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css"
+}
