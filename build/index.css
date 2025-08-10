@@ -1,0 +1,182 @@
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/editor.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+.pricing-table-block-editor {
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border: 1px dashed #ccc;
+  position: relative;
+}
+.pricing-table-block-editor:hover {
+  outline: 2px solid #007cba;
+  outline-offset: -2px;
+}
+.pricing-table-block-editor .ptb-editor-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+.pricing-table-block-editor .ptb-editor-header h3 {
+  margin: 0 0 0.5rem 0;
+  color: #1e1e1e;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.pricing-table-block-editor .ptb-editor-header p {
+  margin: 0;
+  color: #666;
+  font-size: 0.875rem;
+}
+.pricing-table-block-editor .ptb-tiers-editor {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .pricing-table-block-editor .ptb-tiers-editor {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+.pricing-table-block-editor .ptb-tier-editor {
+  border: 2px solid #e0e0e0 !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease;
+  background: white;
+}
+.pricing-table-block-editor .ptb-tier-editor:hover {
+  border-color: #007cba !important;
+  box-shadow: 0 2px 8px rgba(0, 123, 186, 0.1);
+}
+.pricing-table-block-editor .ptb-tier-editor.ptb-tier-featured {
+  border-color: #00a32a !important;
+  box-shadow: 0 2px 8px rgba(0, 163, 42, 0.1);
+}
+.pricing-table-block-editor .ptb-tier-editor.ptb-tier-featured .components-card__header {
+  background: #f0f8f0;
+}
+.pricing-table-block-editor .ptb-tier-editor .components-card__header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+.pricing-table-block-editor .ptb-tier-editor .components-card__body {
+  padding: 1.5rem;
+}
+.pricing-table-block-editor .ptb-tier-editor .components-card__body .components-base-control {
+  margin-bottom: 1rem;
+}
+.pricing-table-block-editor .ptb-featured-badge {
+  background: #00a32a;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+.pricing-table-block-editor .ptb-description-field {
+  margin: 1rem 0;
+}
+.pricing-table-block-editor .ptb-description-field .components-base-control__label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #1e1e1e;
+  font-size: 0.875rem;
+}
+.pricing-table-block-editor .ptb-description-field p {
+  font-size: 0.875rem;
+}
+.pricing-table-block-editor .ptb-richtext-wrapper {
+  border: 1px solid #949494;
+  border-radius: 4px;
+  padding: 0.75rem;
+  min-height: 80px;
+  background: white;
+  transition: border-color 0.2s ease;
+}
+.pricing-table-block-editor .ptb-richtext-wrapper:focus-within {
+  border-color: #007cba;
+  box-shadow: 0 0 0 1px #007cba;
+}
+.pricing-table-block-editor .ptb-richtext-wrapper .block-editor-rich-text__editable {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  min-height: 50px;
+  line-height: 1.5;
+}
+.pricing-table-block-editor .ptb-richtext-wrapper .block-editor-rich-text__editable p {
+  margin: 0;
+}
+.pricing-table-block-editor .ptb-features-section {
+  margin: 1rem 0;
+}
+.pricing-table-block-editor .ptb-features-section .components-base-control__label {
+  font-weight: 600;
+  color: #1e1e1e;
+  font-size: 0.875rem;
+}
+.pricing-table-block-editor .ptb-features-section .ptb-features-list {
+  margin-top: 0.75rem;
+}
+.pricing-table-block-editor .ptb-features-section .ptb-features-list .components-flex {
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+.pricing-table-block-editor .ptb-features-section .ptb-features-list .components-flex .components-flex__item:first-child {
+  flex-grow: 1;
+}
+.pricing-table-block-editor .ptb-features-section .ptb-features-list .components-flex .components-text-control__input {
+  margin: 0;
+}
+.pricing-table-block-editor .ptb-features-section .ptb-features-list .components-flex .components-button {
+  margin-left: 0.5rem;
+  min-width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pricing-table-block-editor .ptb-cta-section {
+  margin: 1rem 0 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+.pricing-table-block-editor .ptb-cta-section .components-base-control {
+  margin-bottom: 0.75rem;
+}
+.pricing-table-block-editor .ptb-add-tier {
+  text-align: center;
+  padding: 1.5rem;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  background: white;
+}
+.pricing-table-block-editor .ptb-add-tier .components-button {
+  padding: 0.75rem 1.5rem;
+  height: auto;
+  font-weight: 600;
+}
+.pricing-table-block-editor .components-text-control__input {
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  border-radius: 4px;
+}
+.pricing-table-block-editor .components-button {
+  min-height: 36px;
+  border-radius: 4px;
+}
+
+.wp-block-pricing-table-block-main.is-selected .pricing-table-block-editor, .wp-block-pricing-table-block-main.has-child-selected .pricing-table-block-editor {
+  outline: 2px solid #007cba;
+  outline-offset: -2px;
+}
+
+/*# sourceMappingURL=index.css.map*/

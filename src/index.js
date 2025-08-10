@@ -1,9 +1,12 @@
 import { registerBlockType } from '@wordpress/blocks';
 import Edit from './edit';
 import save from './save';
-import './style.css';
+import './style.scss';
+import './editor.scss';
 
-registerBlockType('pricing-table-block/main', {
+import metadata from './block.json';
+
+registerBlockType( metadata.name, {
     edit: Edit,
     save,
 });

@@ -1,0 +1,54 @@
+{
+  "blockName": "pricing-table-block/main",
+  "attrs": {
+    "tiers": [
+      {
+        "name": "Starter",
+        "price": "$9/month",
+        "description": "<p>Perfect for individuals and small projects.</p>",
+        "features": [
+          "5 Projects",
+          "10GB Storage",
+          "Email Support",
+          "Basic Analytics"
+        ],
+        "ctaText": "Get Started",
+        "ctaUrl": "https://example.com/starter"
+      },
+      {
+        "name": "Professional",
+        "price": "$29/month", 
+        "description": "<p>Ideal for growing businesses and teams.</p>",
+        "features": [
+          "Unlimited Projects",
+          "100GB Storage", 
+          "Priority Support",
+          "Advanced Analytics",
+          "Team Collaboration",
+          "Custom Integrations"
+        ],
+        "ctaText": "Upgrade to Pro",
+        "ctaUrl": "https://example.com/professional"
+      },
+      {
+        "name": "Enterprise",
+        "price": "$99/month",
+        "description": "<p>For large organizations with advanced needs.</p>",
+        "features": [
+          "Unlimited Everything",
+          "1TB Storage",
+          "24/7 Phone Support",
+          "Custom Analytics",
+          "Advanced Security",
+          "API Access",
+          "Dedicated Manager"
+        ],
+        "ctaText": "Contact Sales",
+        "ctaUrl": "mailto:sales@example.com"
+      }
+    ],
+    "featuredTier": 1,
+    "featuredBadgeText": "Most Popular"
+  },
+  "innerBlocks": []
+}

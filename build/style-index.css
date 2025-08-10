@@ -1,116 +1,206 @@
-/*!*******************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/style.css ***!
-  \*******************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+.pricing-table-block {
+  margin: var(--wp--preset--spacing--50, clamp(30px, 5vw, 50px)) 0;
+  padding: 0;
+}
 .pricing-table-block .ptb-tiers {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  display: grid;
+  gap: var(--wp--preset--spacing--40, 30px);
+  max-width: 100%;
+  align-items: stretch;
+  grid-template-columns: 1fr;
 }
-
-.pricing-table-block .ptb-tier {
-    border: 1.5px solid var(--wp--preset--color--contrast, #c9c9c9);
-    border-radius: 1.2em;
-    padding: 1.8em 1.2em;
-    background: var(--wp--preset--color--base, #fff);
-    box-shadow: 0 3px 14px rgba(0,0,0,0.07);
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    transition: box-shadow 0.2s;
-}
-
-.pricing-table-block .ptb-tier:hover {
-    box-shadow: 0 4px 24px rgba(0,0,0,0.14);
-    border-color: var(--wp--preset--color--primary, #2563eb);
-}
-
-.ptb-tier-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 0.7em;
-    gap: 0.5em;
-}
-
-.ptb-tier-price {
-    color: var(--wp--preset--color--primary, #2563eb);
-    font-size: 1.25em;
-    font-weight: 600;
-}
-
-.ptb-tier-description {
-    margin-bottom: 0.9em;
-    color: var(--wp--preset--color--contrast, #454545);
-}
-
-.ptb-tier-features {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 1.1em 0;
-}
-.ptb-tier-features li {
-    margin-bottom: 0.45em;
-    padding-left: 1.1em;
-    position: relative;
-}
-.ptb-tier-features li::before {
-    content: "✓";
-    color: var(--wp--preset--color--primary, #2563eb);
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-}
-
-.ptb-tier-cta {
-    margin-top: auto;
-    text-align: center;
-}
-.ptb-btn {
-    display: inline-block;
-    background: var(--wp--preset--color--primary, #2563eb);
-    color: var(--wp--preset--color--base, #fff);
-    border-radius: 999px;
-    padding: 0.55em 2.2em;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background 0.2s;
-    font-size: 1em;
-}
-.ptb-btn:hover {
-    background: var(--wp--preset--color--contrast, #111);
-    color: #fff;
-}
-
-/* Responsive */
 @media (min-width: 768px) {
-    .pricing-table-block .ptb-tiers {
-        flex-direction: row;
-        gap: 2.5em;
-        justify-content: center;
-    }
-    .pricing-table-block .ptb-tier {
-        min-width: 270px;
-        max-width: 380px;
-        flex: 1 1 0;
-    }
+  .pricing-table-block .ptb-tiers {
+    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    gap: var(--wp--preset--spacing--40, clamp(30px, 5vw, 50px));
+  }
 }
-
-.ptb-tier-featured {
-    border: 2.5px solid var(--wp--preset--color--primary, #2563eb);
-    box-shadow: 0 6px 32px rgba(37, 99, 235, 0.10), 0 0px 0px rgba(0,0,0,0.02);
-    background: var(--wp--preset--color--primary, #ecf2fd);
-    transform: scale(1.04);
-    z-index: 1;
-    position: relative;
+@media (min-width: 1024px) {
+  .pricing-table-block .ptb-tiers {
+    gap: var(--wp--preset--spacing--50, clamp(30px, 7vw, 70px));
+  }
 }
-.ptb-tier-featured .ptb-btn {
-    background: var(--wp--preset--color--contrast, #111);
-    color: var(--wp--preset--color--base, #fff);
+.pricing-table-block .ptb-tiers .ptb-tier {
+  background: var(--wp--preset--color--base, #ffffff);
+  border: 1px solid var(--wp--preset--color--accent-6, rgba(17, 17, 17, 0.1));
+  border-radius: var(--wp--preset--spacing--20, 10px);
+  padding: var(--wp--preset--spacing--50, clamp(30px, 5vw, 50px));
+  position: relative;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
-.ptb-tier-featured .ptb-tier-price {
-    color: var(--wp--preset--color--contrast, #111);
+.pricing-table-block .ptb-tiers .ptb-tier:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: var(--wp--preset--color--accent-3, #503aa8);
+}
+.pricing-table-block .ptb-tiers .ptb-tier.ptb-tier-featured {
+  border-color: var(--wp--preset--color--accent-3, #503aa8);
+  border-width: 2px;
+  z-index: 1;
+}
+.pricing-table-block .ptb-tiers .ptb-tier.ptb-tier-featured::before {
+  content: attr(data-featured-text);
+  position: absolute;
+  top: calc(-1 * var(--wp--preset--spacing--20, 10px));
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--wp--preset--color--accent-3, #503aa8);
+  color: var(--wp--preset--color--base, #ffffff);
+  padding: var(--wp--preset--spacing--20, 10px) var(--wp--preset--spacing--40, 30px);
+  border-radius: var(--wp--preset--spacing--40, 30px);
+  font-size: var(--wp--preset--font-size--small, 0.875rem);
+  font-weight: 600;
+  z-index: 2;
+  white-space: nowrap;
+}
+.pricing-table-block .ptb-tiers .ptb-tier.ptb-tier-featured:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(80, 58, 168, 0.15);
+}
+.pricing-table-block .ptb-tiers .ptb-tier-header {
+  text-align: center;
+  margin-bottom: var(--wp--preset--spacing--40, 30px);
+}
+.pricing-table-block .ptb-tiers .ptb-tier-header .ptb-tier-name {
+  font-size: var(--wp--preset--font-size--large, 1.5rem);
+  font-weight: 700;
+  margin: 0 0 var(--wp--preset--spacing--20, 10px) 0;
+  color: var(--wp--preset--color--contrast, #111111);
+  line-height: var(--wp--line-height--heading, 1.2);
+}
+.pricing-table-block .ptb-tiers .ptb-tier-header .ptb-tier-price {
+  font-size: var(--wp--preset--font-size--x-large, 2rem);
+  font-weight: 800;
+  color: var(--wp--preset--color--accent-3, #503aa8);
+  margin: 0;
+  line-height: var(--wp--line-height--heading, 1.2);
+}
+.pricing-table-block .ptb-tiers .ptb-tier-description {
+  margin: 0 0 var(--wp--preset--spacing--40, 30px) 0;
+  color: var(--wp--preset--color--accent-4, #686868);
+  text-align: center;
+  font-size: var(--wp--preset--font-size--medium, 1rem);
+  line-height: var(--wp--line-height--body, 1.6);
+}
+.pricing-table-block .ptb-tiers .ptb-tier-description p {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+}
+.pricing-table-block .ptb-tiers .ptb-tier-features {
+  flex-grow: 1;
+  margin: 0 0 var(--wp--preset--spacing--50, clamp(30px, 5vw, 50px)) 0;
+  list-style: none;
+  padding: 0;
+}
+.pricing-table-block .ptb-tiers .ptb-tier-features li {
+  padding: var(--wp--preset--spacing--30, 20px) 0;
+  border-bottom: 1px solid var(--wp--preset--color--accent-6, rgba(17, 17, 17, 0.1));
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  font-size: var(--wp--preset--font-size--medium, 1rem);
+  line-height: var(--wp--line-height--body, 1.6);
+  color: var(--wp--preset--color--contrast, #111111);
+}
+.pricing-table-block .ptb-tiers .ptb-tier-features li .ptb-feature-check {
+  color: var(--wp--preset--color--accent-3, #503aa8);
+  font-weight: bold;
+  font-size: var(--wp--preset--font-size--medium, 1rem);
+  margin-right: var(--wp--preset--spacing--30, 20px);
+  flex-shrink: 0;
+}
+.pricing-table-block .ptb-tiers .ptb-tier-features li .ptb-feature-text {
+  flex: 1;
+}
+.pricing-table-block .ptb-tiers .ptb-tier-features li:last-child {
+  border-bottom: none;
+}
+.pricing-table-block .ptb-tiers .ptb-tier-cta {
+  text-align: center;
+  margin-top: auto;
+}
+.pricing-table-block .ptb-tiers .ptb-tier-cta .ptb-btn {
+  display: inline-block;
+  background: var(--wp--preset--color--accent-3, #503aa8);
+  color: var(--wp--preset--color--base, #ffffff);
+  padding: var(--wp--preset--spacing--40, 30px) var(--wp--preset--spacing--50, clamp(30px, 5vw, 50px));
+  border-radius: var(--wp--preset--spacing--20, 10px);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--wp--preset--font-size--medium, 1rem);
+  line-height: var(--wp--line-height--body, 1.6);
+  transition: all 0.2s ease;
+  border: 2px solid var(--wp--preset--color--accent-3, #503aa8);
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
+  position: relative;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pricing-table-block .ptb-tiers .ptb-tier-cta .ptb-btn .ptb-btn-text {
+  position: relative;
+  z-index: 1;
+}
+.pricing-table-block .ptb-tiers .ptb-tier-cta .ptb-btn:hover {
+  background: var(--wp--preset--color--contrast, #111111);
+  border-color: var(--wp--preset--color--contrast, #111111);
+  color: var(--wp--preset--color--base, #ffffff);
+  transform: translateY(-1px);
+}
+.pricing-table-block .ptb-tiers .ptb-tier-cta .ptb-btn:focus {
+  outline: 3px solid var(--wp--preset--color--accent-1, #ffee58);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 1px var(--wp--preset--color--accent-3, #503aa8);
+  background: var(--wp--preset--color--contrast, #111111);
+  border-color: var(--wp--preset--color--contrast, #111111);
+}
+@media (prefers-contrast: high) {
+  .pricing-table-block .ptb-tiers .ptb-tier-cta .ptb-btn {
+    border-width: 3px;
+    font-weight: 700;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pricing-table-block .ptb-tiers .ptb-tier-cta .ptb-btn {
+    transition: none;
+  }
+  .pricing-table-block .ptb-tiers .ptb-tier-cta .ptb-btn:hover {
+    transform: none;
+  }
+}
+.pricing-table-block .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (prefers-contrast: high) {
+  .pricing-table-block .ptb-tier {
+    border-width: 2px;
+  }
+  .pricing-table-block .ptb-tier-featured {
+    border-width: 3px;
+  }
+}
+.pricing-table-block .ptb-tier:focus-within {
+  outline: 2px solid var(--wp--preset--color--accent-3, #503aa8);
+  outline-offset: 2px;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

@@ -1,16 +1,19 @@
 {
   "name": "pricing-table-block",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "A custom pricing table block for WordPress",
+  "main": "build/index.js",
   "scripts": {
     "build": "wp-scripts build",
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
     "start": "wp-scripts start"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "devDependencies": {
-    "@wordpress/scripts": "^30.20.0"
+    "@wordpress/scripts": "^27.0.0",
+    "@wordpress/icons": "^9.0.0"
   }
 }

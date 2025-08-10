@@ -1,0 +1,220 @@
+.pricing-table-block-editor {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin: 1rem 0;
+    border: 1px dashed #ccc;
+    position: relative;
+
+    // Add block selector outline for easy selection
+    &:hover {
+        outline: 2px solid #007cba;
+        outline-offset: -2px;
+    }
+
+    .ptb-editor-header {
+        text-align: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #ddd;
+
+        h3 {
+            margin: 0 0 0.5rem 0;
+            color: #1e1e1e;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 0;
+            color: #666;
+            font-size: 0.875rem;
+        }
+    }
+
+    .ptb-tiers-editor {
+        display: grid;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+
+        // Mobile: Single column
+        grid-template-columns: 1fr;
+
+        // Tablets and up: Multiple columns
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+    }
+
+    .ptb-tier-editor {
+        border: 2px solid #e0e0e0 !important;
+        border-radius: 8px !important;
+        transition: all 0.2s ease;
+        background: white;
+
+        &:hover {
+            border-color: #007cba !important;
+            box-shadow: 0 2px 8px rgba(0, 123, 186, 0.1);
+        }
+
+        &.ptb-tier-featured {
+            border-color: #00a32a !important;
+            box-shadow: 0 2px 8px rgba(0, 163, 42, 0.1);
+
+            .components-card__header {
+                background: #f0f8f0;
+            }
+        }
+
+        .components-card__header {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .components-card__body {
+            padding: 1.5rem;
+
+            .components-base-control {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    .ptb-featured-badge {
+        background: #00a32a;
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 12px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-left: 0.5rem;
+    }
+
+    .ptb-description-field {
+        margin: 1rem 0;
+
+        .components-base-control__label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #1e1e1e;
+            font-size: 0.875rem;
+        }
+
+        p{
+            font-size: 0.875rem;
+        }
+    }
+
+    .ptb-richtext-wrapper {
+        border: 1px solid #949494;
+        border-radius: 4px;
+        padding: 0.75rem;
+        min-height: 80px;
+        background: white;
+        transition: border-color 0.2s ease;
+
+        &:focus-within {
+            border-color: #007cba;
+            box-shadow: 0 0 0 1px #007cba;
+        }
+
+        .block-editor-rich-text__editable {
+            margin: 0 !important;
+            padding: 0 !important;
+            border: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+            min-height: 50px;
+            line-height: 1.5;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    .ptb-features-section {
+        margin: 1rem 0;
+
+        .components-base-control__label {
+            font-weight: 600;
+            color: #1e1e1e;
+            font-size: 0.875rem;
+        }
+
+        .ptb-features-list {
+            margin-top: 0.75rem;
+
+            .components-flex {
+                margin-bottom: 0.5rem;
+                align-items: center;
+
+                .components-flex__item:first-child {
+                    flex-grow: 1;
+                }
+
+                .components-text-control__input {
+                    margin: 0;
+                }
+
+                .components-button {
+                    margin-left: 0.5rem;
+                    min-width: 32px;
+                    height: 32px;
+                    padding: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+    .ptb-cta-section {
+        margin: 1rem 0 0 0;
+        padding-top: 1rem;
+        border-top: 1px solid #e0e0e0;
+
+        .components-base-control {
+            margin-bottom: 0.75rem;
+        }
+    }
+
+    .ptb-add-tier {
+        text-align: center;
+        padding: 1.5rem;
+        border: 2px dashed #ccc;
+        border-radius: 8px;
+        background: white;
+
+        .components-button {
+            padding: 0.75rem 1.5rem;
+            height: auto;
+            font-weight: 600;
+        }
+    }
+
+    // Make components more touch-friendly
+    .components-text-control__input {
+        padding: 0.75rem;
+        font-size: 0.875rem;
+        border-radius: 4px;
+    }
+
+    .components-button {
+        min-height: 36px;
+        border-radius: 4px;
+    }
+}
+
+// Block selector improvements
+.wp-block-pricing-table-block-main {
+    &.is-selected,
+    &.has-child-selected {
+        .pricing-table-block-editor {
+            outline: 2px solid #007cba;
+            outline-offset: -2px;
+        }
+    }
+}
